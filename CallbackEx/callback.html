@@ -1,0 +1,49 @@
+<html>
+  <script>
+    const list = [
+      5,
+      8,
+      9,
+      2,
+      7,
+      6,
+      3,
+      1,
+      4,
+      15,
+      23,
+      44,
+      56,
+      13,
+      19,
+      65,
+      123,
+      590,
+      21,
+      83,
+      10,
+      28,
+    ];
+
+    function callback(list) {
+      const newList = [];
+      for (let i = 0; i < list.length; i++) {
+        let num = list[i];
+        if (num % 2 === 0) {
+          newList.push(list[i]);
+        }
+        function compareFunction(a, b) {
+          return a - b;
+        }
+      }
+      return newList.sort(compareFunction);
+    }
+
+    function filter(list, callback) {
+      return callback(list);
+    }
+
+    const filtered = filter(list, callback);
+    console.log(filtered);
+  </script>
+</html>
